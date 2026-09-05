@@ -1,0 +1,113 @@
+site_name: "Jak připravit maturitní práci v Google Docs"
+site_description: "Praktická webová příručka pro studenty GASOŠ k nastavení Google Docs, práci se Zoterem a dokončení odborné práce."
+site_author: Jaroslav Fait
+
+theme:
+  name: material
+  language: cs
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Přepnout na tmavý režim
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Přepnout na světlý režim
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+
+nav:
+  - Domů: index.md
+  - Jak používat příručku: jak-pouzivat-prirucku.md
+  - Příprava:
+      - Potřebné nástroje: priprava/nastroje.md
+      - Druhy a skladba prací: priprava/druhy-praci.md
+      - Založení dokumentu: priprava/zalozeni-dokumentu.md
+      - Cvičný text: priprava/cvicny-text.md
+  - Google Docs:
+      - Nastavení stránky: google-docs/nastaveni-stranky.md
+      - Styly: google-docs/styly.md
+      - Nadpisy: google-docs/nadpisy.md
+      - Číslování nadpisů: google-docs/cislovani-nadpisu.md
+      - Odstavce: google-docs/odstavce.md
+      - Seznamy: google-docs/seznamy.md
+      - Konce stránek a oddíly: google-docs/konce-stranek-a-oddily.md
+      - Tabulky: google-docs/tabulky.md
+      - Obrázky a grafy: google-docs/obrazky-a-grafy.md
+      - Popisky a seznamy: google-docs/popisky-a-seznamy.md
+      - Automatický obsah: google-docs/automaticky-obsah.md
+      - Číslování stran: google-docs/cislovani-stran.md
+  - Automatizace:
+      - Instalace Apps Scriptu: automatizace/apps-script.md
+      - Ovládání skriptu: automatizace/ovladani-skriptu.md
+      - Omezení a obnova: automatizace/omezeni-a-obnova.md
+  - Zotero:
+      - Instalace: zotero/instalace.md
+      - Knihovna a synchronizace: zotero/knihovna-a-synchronizace.md
+      - Přidávání zdrojů: zotero/pridavani-zdroju.md
+      - Kontrola metadat: zotero/kontrola-metadat.md
+      - Citace autor-rok: zotero/citace-autor-rok.md
+      - Citace v poznámkách: zotero/citace-v-poznamkach.md
+      - Další citační styly: zotero/dalsi-citacni-styly.md
+      - Archivní prameny: zotero/archivni-prameny.md
+      - Seznam literatury: zotero/seznam-literatury.md
+  - Dokončení:
+      - Závěrečná kontrola: dokonceni/zaverecna-kontrola.md
+      - Export do PDF: dokonceni/export-pdf.md
+      - Odevzdání: dokonceni/odevzdani.md
+  - Řešení problémů:
+      - Google Docs: reseni-problemu/google-docs.md
+      - Apps Script: reseni-problemu/apps-script.md
+      - Zotero: reseni-problemu/zotero.md
+  - Slovník: slovnik.md
+  - Zdroje a metodika: zdroje-a-metodika.md
+
+copyright: "Jak připravit maturitní práci v Google Docs"

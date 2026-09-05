@@ -1,0 +1,62 @@
+:root {
+  --md-primary-fg-color: #1565c0;
+  --md-accent-fg-color: #00897b;
+}
+
+.lesson-meta {
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+  padding: .9rem 1rem;
+  margin: 1rem 0 1.5rem;
+  border-radius: .3rem;
+}
+
+.source-note {
+  border-left: 4px solid var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 9%, transparent);
+  padding: .9rem 1rem;
+  margin: 1rem 0 1.5rem;
+  border-radius: .3rem;
+}
+
+.project-goal {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .5rem;
+  padding: 1rem 1.2rem;
+  background: var(--md-code-bg-color);
+}
+
+.md-typeset h1 {
+  font-weight: 750;
+}
+
+.md-typeset h2 {
+  margin-top: 2.1rem;
+}
+
+.md-typeset .mermaid {
+  min-width: 920px;
+}
+
+.md-typeset div:has(> .mermaid) {
+  overflow-x: auto;
+  padding-bottom: .5rem;
+}
+
+.checklist li {
+  margin-bottom: .25rem;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: .75rem;
+}
+
+.status-grid > div {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .5rem;
+  padding: .75rem .9rem;
+  background: var(--md-code-bg-color);
+}
+
