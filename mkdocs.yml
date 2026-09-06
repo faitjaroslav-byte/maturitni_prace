@@ -50,6 +50,9 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
