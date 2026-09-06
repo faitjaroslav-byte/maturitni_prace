@@ -9,9 +9,6 @@
 
 Tato příručka provede studenta založením dokumentu, nastavením stylů, číslováním, popisky, citacemi v Zoteru a závěrečným exportem práce do PDF. Je určená pro maturitní, ročníkové a seminární odborné práce.
 
-!!! warning "Ověřte s vedoucím práce"
-    Tato příručka je pouze pomocný technický manuál. Závazné jsou požadavky školního manuálu GASOŠ, konkrétní zadání práce a průběžné požadavky vedoucího práce.
-
 ## Rychlý rozcestník
 
 <div class="status-grid" markdown>
