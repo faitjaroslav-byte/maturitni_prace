@@ -2,14 +2,15 @@
 
 <div class="lesson-meta" markdown>
 **Verze:** pracovní webová publikace  
-**Podklad:** manuál GASOŠ verze 240221 a obsahový master z `project-resources`  
-**Aktualizace:** 5. září 2026
+**Charakter příručky:** pomocný technický manuál zaměřený zejména na textové, tabulkové a pomocné aplikace  
+**Závazné podklady:** školní manuál **Jak napsat maturitní práci na G+SOŠ Rokycany**, verze 240221, datum 21. února 2024; zadání práce; průběžné požadavky vedoucího práce  
+**Aktualizace:** 6. září 2026
 </div>
 
 Tato příručka provede studenta založením dokumentu, nastavením stylů, číslováním, popisky, citacemi v Zoteru a závěrečným exportem práce do PDF. Je určená pro maturitní, ročníkové a seminární odborné práce.
 
 !!! warning "Ověřte s vedoucím práce"
-    Příručka nenahrazuje konkrétní zadání, pokyny vedoucího práce ani aktuální organizační pokyny školy. Pokud se pokyny liší, rozhoduje závazný školní dokument nebo vedoucí práce.
+    Tato příručka je pouze pomocný technický manuál. Závazné jsou požadavky školního manuálu GASOŠ, konkrétní zadání práce a průběžné požadavky vedoucího práce.
 
 ## Rychlý rozcestník
 
@@ -49,4 +50,3 @@ Najděte typickou chybu v Google Docs, Apps Scriptu nebo Zoteru.
 
 !!! info "Technická poznámka"
     V repozitáři zatím chybí finální otestovaný Apps Script a aktuální školní šablona. Kapitoly o automatizaci proto popisují bezpečný postup a označují místa, která je nutné doplnit podle skutečného skriptu.
-

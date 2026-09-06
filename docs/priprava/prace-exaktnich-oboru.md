@@ -16,11 +16,13 @@ flowchart TB
     I --> J["Diskuze"]
     J --> K["Závěr"]
     K --> L["Seznam použité literatury"]
+    L --> M["Seznamy obrázků, grafů a tabulek<br/>(pokud jsou použity)"]
+    M --> N["Přílohy<br/>(pokud jsou použity)"]
 ```
 
 ## Poznámky ke skladbě
 
-**Materiál a metody** mají umožnit zopakování nebo posouzení výzkumu. **Výsledky** uvádějí zjištění bez dojmů a emocí. **Diskuze** výsledky vysvětluje, hodnotí a porovnává s jinými pracemi.
+**Materiál a metody** mají umožnit zopakování nebo posouzení výzkumu. **Výsledky** uvádějí zjištění bez dojmů a emocí. **Diskuze** výsledky vysvětluje, hodnotí a porovnává s jinými pracemi. Seznamy obrázků, grafů a tabulek i přílohy se zařazují jen tehdy, když je práce skutečně obsahuje.
 
 !!! warning "Ověřte s vedoucím práce"
     Konkrétní názvy metodických a výsledkových kapitol se mohou lišit podle oboru a zadání.

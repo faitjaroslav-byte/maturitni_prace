@@ -17,8 +17,8 @@ flowchart TB
     G --> H["Vlastní stať"]
     H --> I["Závěr"]
     I --> J["Seznam literatury"]
-    J --> K["Seznamy obrázků, grafů a tabulek"]
-    K --> L["Přílohy"]
+    J --> K["Seznamy obrázků, grafů a tabulek<br/>(pokud jsou použity)"]
+    K --> L["Přílohy<br/>(pokud jsou použity)"]
 ```
 
 ## Poznámky ke skladbě

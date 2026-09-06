@@ -16,11 +16,13 @@ flowchart TB
     F --> G["Vlastní text práce"]
     G --> H["Závěr"]
     H --> I["Seznam použité literatury"]
+    I --> J["Seznamy obrázků, grafů a tabulek<br/>(pokud jsou použity)"]
+    J --> K["Přílohy<br/>(pokud jsou použity)"]
 ```
 
 ## Poznámky ke skladbě
 
-Poděkování není obsahově povinné. Úvod vymezuje téma, aktuální stav problematiky a cíle práce. Vlastní text má být vystavěný věcně, ne jako sled opsaných pasáží.
+Poděkování není obsahově povinné. Úvod vymezuje téma, aktuální stav problematiky a cíle práce. Vlastní text má být vystavěný věcně, ne jako sled opsaných pasáží. Seznamy obrázků, grafů a tabulek i přílohy se zařazují jen tehdy, když je práce skutečně obsahuje.
 
 ## Kontrolní bod
 
