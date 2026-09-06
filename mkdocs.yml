@@ -75,23 +75,22 @@ nav:
           - Práce exaktních oborů: priprava/prace-exaktnich-oboru.md
           - Práce humanitních oborů: priprava/prace-humanitnich-oboru.md
           - Technické dílo: priprava/technicke-dilo.md
-  - Google Docs:
-      - Práce v Google Docs:
-          - Přehled: google-docs/index.md
-          - Založení dokumentu: google-docs/zalozeni-dokumentu.md
-          - Cvičný text: google-docs/cvicny-text.md
-          - Nastavení stránky: google-docs/nastaveni-stranky.md
-          - Styly: google-docs/styly.md
-          - Nadpisy: google-docs/nadpisy.md
-          - Číslování nadpisů: google-docs/cislovani-nadpisu.md
-          - Odstavce: google-docs/odstavce.md
-          - Seznamy: google-docs/seznamy.md
-          - Konce stránek a oddíly: google-docs/konce-stranek-a-oddily.md
-          - Tabulky: google-docs/tabulky.md
-          - Obrázky a grafy: google-docs/obrazky-a-grafy.md
-          - Popisky a seznamy: google-docs/popisky-a-seznamy.md
-          - Automatický obsah: google-docs/automaticky-obsah.md
-          - Číslování stran: google-docs/cislovani-stran.md
+  - Práce v Google Docs:
+      - Přehled: google-docs/index.md
+      - Založení dokumentu: google-docs/zalozeni-dokumentu.md
+      - Cvičný text: google-docs/cvicny-text.md
+      - Nastavení stránky: google-docs/nastaveni-stranky.md
+      - Styly: google-docs/styly.md
+      - Nadpisy: google-docs/nadpisy.md
+      - Číslování nadpisů: google-docs/cislovani-nadpisu.md
+      - Odstavce: google-docs/odstavce.md
+      - Seznamy: google-docs/seznamy.md
+      - Konce stránek a oddíly: google-docs/konce-stranek-a-oddily.md
+      - Tabulky: google-docs/tabulky.md
+      - Obrázky a grafy: google-docs/obrazky-a-grafy.md
+      - Popisky a seznamy: google-docs/popisky-a-seznamy.md
+      - Automatický obsah: google-docs/automaticky-obsah.md
+      - Číslování stran: google-docs/cislovani-stran.md
   - Automatizace:
       - Instalace Apps Scriptu: automatizace/apps-script.md
       - Ovládání skriptu: automatizace/ovladani-skriptu.md
