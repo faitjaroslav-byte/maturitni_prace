@@ -55,6 +55,3 @@ Bezpečný postup je:
 - čísla stran;
 - obsah a seznamy;
 - funkčnost odkazů, pokud mají být zachovány.
-
-!!! warning "Častá chyba"
-    Úspěšný export neznamená správnou sazbu. Rozhodující je vizuální kontrola hotového PDF.
