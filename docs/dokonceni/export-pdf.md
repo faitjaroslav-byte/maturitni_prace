@@ -19,6 +19,20 @@ Vytvoříte výsledné PDF a zkontrolujete, že odpovídá dokumentu.
 8. Otevřete stažené PDF mimo Google Docs.
 9. Projděte každou stránku.
 
+## Varování Zotera při stahování
+
+Google Docs může při stahování dokumentu zobrazit varování, že dokument obsahuje aktivní citace Zotera. Aktivní citace se mohou ve stažené kopii chovat jako odkazy na zotero.org.
+
+Bezpečný postup je:
+
+1. Ponechte si původní dokument s propojenými citacemi pro další úpravy.
+2. Vytvořte kopii dokumentu.
+3. V kopii zvolte **Zotero -> Unlink Citations** nebo **Odpojit citace**.
+4. Teprve z této kopie stáhněte finální PDF.
+
+!!! note "Technická poznámka"
+    Odpojením citace nezmizí. Zůstanou v textu i v seznamu literatury, ale stanou se z nich obyčejné textové údaje. Nepůjde je dál aktualizovat přes **Zotero -> Refresh**, změnit jejich citační styl ani automaticky přepočítat bibliografii.
+
 ## Co kontrolovat v PDF
 
 - nechtěné prázdné stránky;
@@ -33,4 +47,3 @@ Vytvoříte výsledné PDF a zkontrolujete, že odpovídá dokumentu.
 
 !!! warning "Častá chyba"
     Úspěšný export neznamená správnou sazbu. Rozhodující je vizuální kontrola hotového PDF.
-
