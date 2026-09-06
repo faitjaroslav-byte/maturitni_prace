@@ -88,10 +88,10 @@ nav:
       - Popisky a seznamy: google-docs/popisky-a-seznamy.md
       - Automatický obsah: google-docs/automaticky-obsah.md
       - Číslování stran: google-docs/cislovani-stran.md
-  - Automatizace:
-      - Instalace Apps Scriptu: automatizace/apps-script.md
-      - Ovládání skriptu: automatizace/ovladani-skriptu.md
-      - Omezení a obnova: automatizace/omezeni-a-obnova.md
+      - Skript na číslování nadpisů:
+          - Instalace Apps Scriptu: automatizace/apps-script.md
+          - Ovládání skriptu: automatizace/ovladani-skriptu.md
+          - Omezení a obnova: automatizace/omezeni-a-obnova.md
   - Zotero:
       - Instalace: zotero/instalace.md
       - Knihovna a synchronizace: zotero/knihovna-a-synchronizace.md
