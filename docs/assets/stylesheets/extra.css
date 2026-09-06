@@ -34,13 +34,15 @@
   margin-top: 2.1rem;
 }
 
-.md-typeset .mermaid {
-  min-width: 920px;
-}
-
 .md-typeset div:has(> .mermaid) {
   overflow-x: auto;
   padding-bottom: .5rem;
+}
+
+.md-typeset .mermaid {
+  display: block;
+  margin: 1.4rem auto;
+  min-width: 20rem;
 }
 
 .checklist li {
@@ -59,4 +61,3 @@
   padding: .75rem .9rem;
   background: var(--md-code-bg-color);
 }
-

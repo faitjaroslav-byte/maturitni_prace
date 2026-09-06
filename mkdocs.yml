@@ -69,7 +69,12 @@ nav:
   - Jak používat příručku: jak-pouzivat-prirucku.md
   - Příprava:
       - Potřebné nástroje: priprava/nastroje.md
-      - Druhy a skladba prací: priprava/druhy-praci.md
+      - Druhy a skladba prací:
+          - Přehled: priprava/druhy-praci.md
+          - Rešeršní práce: priprava/resersni-prace.md
+          - Práce exaktních oborů: priprava/prace-exaktnich-oboru.md
+          - Práce humanitních oborů: priprava/prace-humanitnich-oboru.md
+          - Technické dílo: priprava/technicke-dilo.md
       - Založení dokumentu: priprava/zalozeni-dokumentu.md
       - Cvičný text: priprava/cvicny-text.md
   - Google Docs:
