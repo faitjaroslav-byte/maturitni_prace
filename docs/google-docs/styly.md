@@ -21,6 +21,8 @@ Typické patkové fonty:
 - **Georgia** - dobře čitelný patkový font, původně navržený i pro obrazovku;
 - **Cambria** - patkový font běžný v prostředí Microsoft Office.
 
+**Arial** je naopak typický příklad bezpatkového písma. V této příručce se proto hodí jako příklad písma pro nadpisy, ne pro běžný text.
+
 !!! warning "Ověřte s vedoucím práce"
     Manuál GASOŠ vyžaduje patkové písmo, ale konkrétní rodinu písma může určit školní šablona, zadání práce nebo vedoucí práce.
 
