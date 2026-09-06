@@ -42,7 +42,6 @@ Připravíte si prostředí, ve kterém můžete dokument psát, formátovat, ci
 
 ## Související témata
 
-- [Založení dokumentu](zalozeni-dokumentu.md)
+- [Založení dokumentu](../google-docs/zalozeni-dokumentu.md)
 - [Instalace Zotera](../zotero/instalace.md)
 - [Omezení a obnova](../automatizace/omezeni-a-obnova.md)
-
