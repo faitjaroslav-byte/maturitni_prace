@@ -1,4 +1,4 @@
-# Jak připravit maturitní práci v Google Docs
+# Maturitní práce - pomocný technický manuál
 
 <div class="lesson-meta" markdown>
 **Verze:** pracovní webová publikace  
@@ -7,13 +7,13 @@
 **Aktualizace:** 6. září 2026
 </div>
 
-Tato příručka provede studenta založením dokumentu, nastavením stylů, číslováním, popisky, citacemi v Zoteru a závěrečným exportem práce do PDF. Je určená pro maturitní, ročníkové a seminární odborné práce.
+Tato příručka provede studenta technickou přípravou dokumentu, nastavením stylů, číslováním, popisky, citacemi, tabulkovými podklady a závěrečným exportem práce do PDF. V aktuální verzi se zaměřuje hlavně na Google Docs a Zotero; počítá se s doplněním MS Wordu, MS Excelu a dalších pomocných aplikací.
 
 ## Rychlý rozcestník
 
 <div class="status-grid" markdown>
 <div markdown>
-**Začínám nový dokument**
+**Začínám dokument**
 
 Začněte nástroji, druhem práce a založením dokumentu.
 
@@ -29,7 +29,7 @@ Nastavte Zotero Desktop, Connector, sbírku a jeden citační styl.
 <div markdown>
 **Řeším problém**
 
-Najděte typickou chybu v Google Docs, Apps Scriptu nebo Zoteru.
+Najděte typickou chybu v textovém editoru, Apps Scriptu nebo Zoteru.
 
 [Přejít na řešení problémů](reseni-problemu/google-docs.md)
 </div>
@@ -38,7 +38,7 @@ Najděte typickou chybu v Google Docs, Apps Scriptu nebo Zoteru.
 ## Co se naučíte
 
 - rozlišit typ práce a vybrat odpovídající skladbu kapitol;
-- nastavit v Google Docs stránku A4, okraje, styly a odstavce;
+- nastavit dokument na stránku A4, okraje, styly a odstavce;
 - používat automatický obsah, číslování nadpisů, popisky a seznamy;
 - spravovat zdroje v Zoteru a nevkládat citace ručně;
 - zkontrolovat dokument před exportem do PDF nebo PDF/A.

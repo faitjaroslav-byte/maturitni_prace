@@ -1,5 +1,5 @@
-site_name: "Jak připravit maturitní práci v Google Docs"
-site_description: "Praktická webová příručka pro studenty GASOŠ k nastavení Google Docs, práci se Zoterem a dokončení odborné práce."
+site_name: "Maturitní práce - pomocný technický manuál"
+site_description: "Pomocný technický manuál pro studenty GASOŠ k přípravě maturitní práce v textových, tabulkových a pomocných aplikacích."
 site_author: Jaroslav Fait
 
 theme:
@@ -115,4 +115,4 @@ nav:
   - Slovník: slovnik.md
   - Zdroje a metodika: zdroje-a-metodika.md
 
-copyright: "Jak připravit maturitní práci v Google Docs"
+copyright: "Maturitní práce - pomocný technický manuál"

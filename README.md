@@ -1,6 +1,6 @@
-# Jak připravit maturitní práci v Google Docs
+# Maturitní práce - pomocný technický manuál
 
-Webová příručka pro studenty Gymnázia a SOŠ Rokycany k přípravě maturitní, ročníkové nebo seminární odborné práce v Google Docs a Zoteru.
+Webová příručka pro studenty Gymnázia a SOŠ Rokycany k technické přípravě maturitní, ročníkové nebo seminární odborné práce. Aktuálně pokrývá hlavně Google Docs a Zotero; struktura počítá s budoucím doplněním MS Wordu, MS Excelu a dalších pomocných aplikací.
 
 ## Lokální spuštění
 
@@ -26,4 +26,3 @@ Doporučené nasazení je přes GitHub repozitář napojený v Cloudflare Pages:
 - Root directory: ponechat prázdné, pokud je repozitář celý tento projekt
 
 Projekt neobsahuje žádné tajné hodnoty ani tokeny. Finální Apps Script a školní šablona zatím nejsou součástí repozitáře.
-
