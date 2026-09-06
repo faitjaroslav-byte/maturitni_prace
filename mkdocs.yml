@@ -6,7 +6,6 @@ theme:
   name: material
   language: cs
   features:
-    - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.footer
