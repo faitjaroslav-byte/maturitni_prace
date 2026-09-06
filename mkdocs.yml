@@ -66,14 +66,12 @@ extra_javascript:
 nav:
   - Domů: index.md
   - Jak používat příručku: jak-pouzivat-prirucku.md
-  - Příprava:
-      - Potřebné nástroje: priprava/nastroje.md
-      - Druhy a skladba prací:
-          - Přehled: priprava/druhy-praci.md
-          - Rešeršní práce: priprava/resersni-prace.md
-          - Práce exaktních oborů: priprava/prace-exaktnich-oboru.md
-          - Práce humanitních oborů: priprava/prace-humanitnich-oboru.md
-          - Technické dílo: priprava/technicke-dilo.md
+  - Druhy a skladba prací:
+      - Přehled: priprava/druhy-praci.md
+      - Rešeršní práce: priprava/resersni-prace.md
+      - Práce exaktních oborů: priprava/prace-exaktnich-oboru.md
+      - Práce humanitních oborů: priprava/prace-humanitnich-oboru.md
+      - Technické dílo: priprava/technicke-dilo.md
   - Práce v Google Docs:
       - Přehled: google-docs/index.md
       - Založení dokumentu: google-docs/zalozeni-dokumentu.md

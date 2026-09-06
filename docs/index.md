@@ -15,9 +15,9 @@ Tato příručka provede studenta technickou přípravou dokumentu, nastavením 
 <div markdown>
 **Začínám dokument**
 
-Začněte nástroji, druhem práce a založením dokumentu.
+Začněte druhem práce a založením dokumentu.
 
-[Přejít na přípravu](priprava/nastroje.md)
+[Přejít na druhy prací](priprava/druhy-praci.md)
 </div>
 <div markdown>
 **Potřebuji citovat**

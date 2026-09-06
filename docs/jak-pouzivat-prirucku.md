@@ -30,9 +30,9 @@ Při společné práci je vhodné držet jednoduchý rytmus:
 
 ## Doporučené pořadí
 
-1. [Potřebné nástroje](priprava/nastroje.md)
-2. [Druhy a skladba prací](priprava/druhy-praci.md)
-3. [Založení dokumentu](google-docs/zalozeni-dokumentu.md)
+1. [Druhy a skladba prací](priprava/druhy-praci.md)
+2. [Založení dokumentu](google-docs/zalozeni-dokumentu.md)
+3. [Cvičný text](google-docs/cvicny-text.md)
 4. [Nastavení stránky](google-docs/nastaveni-stranky.md)
 5. [Styly](google-docs/styly.md)
 6. [Zotero](zotero/instalace.md)
