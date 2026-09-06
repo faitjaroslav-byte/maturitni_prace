@@ -26,3 +26,14 @@ Doporučené nasazení je přes GitHub repozitář napojený v Cloudflare Pages:
 - Root directory: ponechat prázdné, pokud je repozitář celý tento projekt
 
 Projekt neobsahuje žádné tajné hodnoty ani tokeny. Finální Apps Script a školní šablona zatím nejsou součástí repozitáře.
+
+### Ochrana webu heslem
+
+Cloudflare Pages používá soubor `docs/_worker.js`, který chrání celý web pomocí HTTP Basic Authentication.
+
+V Cloudflare nastavte tyto proměnné prostředí:
+
+- `BASIC_AUTH_USERNAME` - přihlašovací jméno;
+- `BASIC_AUTH_PASSWORD` - přihlašovací heslo.
+
+Pokud proměnné nejsou nastavené, Worker web nenaservíruje a vrátí chybu konfigurace.
