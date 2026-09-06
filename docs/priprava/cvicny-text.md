@@ -2,24 +2,29 @@
 
 ## Cíl
 
-Připravíte si záměrně nedokonalý text, na kterém půjde nacvičit styly, nadpisy, seznamy, tabulky, obrázky, grafy a citace.
+Na konci nácviku bude cvičný dokument upravený do podoby, která odpovídá základním pravidlům odborné práce.
 
-## Co má cvičný dokument obsahovat
+## Jak má hotový cvičný dokument vypadat
 
 - titulní stranu;
 - nadpisy tří úrovní;
-- několik běžných odstavců;
-- odrážkový a číslovaný seznam;
-- tabulku;
-- obrázek a graf;
-- dvě citace;
-- nadbytečné mezery a prázdné odstavce;
-- ručně napsaná čísla nadpisů;
-- ruční mezery nahrazující skutečné nastavení odstavce.
+- běžné odstavce nastavené stylem **Normální text**;
+- skutečný odrážkový a číslovaný seznam;
+- tabulku s popiskem;
+- obrázek a graf s popisky;
+- dvě citace vložené pomocí Zotera;
+- automaticky vytvořený seznam použité literatury;
+- žádné nadbytečné mezery a prázdné odstavce;
+- žádná ručně napsaná čísla nadpisů;
+- žádné ruční mezery nahrazující skutečné nastavení odstavce.
+
+## Výchozí text pro nácvik
+
+Text ke zkopírování je naopak záměrně surový. Obsahuje nehotové seznamy, tabulková data oddělená středníky, místa pro graf a obrázek i citace napsané jen jako běžný text. V dalších kapitolách z něj postupně vytvoříte správně strukturovaný dokument.
 
 ## Text ke zkopírování
 
-Zkopírujte následující text do nového dokumentu bez dalšího formátování. Nadpisy, seznamy, tabulku, graf, obrázek a citace budete upravovat až v dalších kapitolách.
+Zkopírujte následující text do nového dokumentu bez dalšího formátování.
 
 ```text title="Cvičný neformátovaný text"
 Vliv používání chytrých telefonů na soustředění studentů
