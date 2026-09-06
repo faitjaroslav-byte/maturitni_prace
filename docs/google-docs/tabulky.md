@@ -7,6 +7,9 @@ Tabulky budou čitelné, popsané a udržené s příslušným popiskem.
 !!! info "Požadavek GASOŠ"
     Tabulka má označení `Tab. xx` a samovysvětlující popisek nad tabulkou.
 
+!!! note "Umístění označení"
+    U tabulek se označení a název běžně uvádějí nad tabulkou. Stejné umístění používá také APA 7, zdroj a případná poznámka se však uvádějí pod tabulkou. Konkrétní provedení si vždy odsouhlaste s vedoucím práce.
+
 ## Postup
 
 1. Vložte tabulku přes **Vložit -> Tabulka**.
@@ -29,4 +32,3 @@ Popisek musí být samovysvětlující. Čtenář má pochopit obsah tabulky i b
 - Na odstavec s popiskem nad tabulkou použijte **Udržet s dalším**.
 - Na víceřádkový popisek použijte **Udržet řádky pohromadě**.
 - Pokud tabulka používá převzatá data, uveďte zdroj.
-
