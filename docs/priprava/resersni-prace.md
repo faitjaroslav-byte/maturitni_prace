@@ -1,9 +1,5 @@
 # Rešeršní práce
 
-## Cíl
-
-Uvidíte doporučenou skladbu rešeršní práce jako svislý postup od titulní strany po seznam použité literatury.
-
 Rešeršní neboli kompilační práce je podle školního manuálu přípustná jen výjimečně. Musí pracovat s větším množstvím relevantních zdrojů a autor v ní zdroje porovnává, propojuje a parafrázuje.
 
 !!! info "Požadavek GASOŠ"
@@ -36,4 +32,3 @@ Poděkování není obsahově povinné. Úvod vymezuje téma, aktuální stav pr
 
 - [Přidávání zdrojů](../zotero/pridavani-zdroju.md)
 - [Seznam použité literatury](../zotero/seznam-literatury.md)
-

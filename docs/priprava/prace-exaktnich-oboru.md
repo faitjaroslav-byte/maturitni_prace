@@ -1,9 +1,5 @@
 # Práce exaktních oborů
 
-## Cíl
-
-Uvidíte skladbu původní práce exaktních oborů jako svislý postup od titulní strany po seznam literatury.
-
 Práce exaktních oborů stojí na vlastním výzkumu, měření nebo experimentu. Čtenář musí pochopit, co bylo zkoumáno, jak byl postup proveden a jak výsledky souvisejí s publikovanými poznatky.
 
 ```mermaid
@@ -39,4 +35,3 @@ flowchart TB
 
 - [Obrázky a grafy](../google-docs/obrazky-a-grafy.md)
 - [Citace autor-rok](../zotero/citace-autor-rok.md)
-

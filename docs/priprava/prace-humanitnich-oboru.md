@@ -1,9 +1,5 @@
 # Práce humanitních oborů
 
-## Cíl
-
-Uvidíte skladbu původní humanitně orientované práce jako svislý postup od titulní strany po přílohy.
-
 Humanitní práce má sledovat jasnou argumentační linku. Vlastní stať se dělí do věcných kapitol podle tématu, pramenů, postupu a argumentace.
 
 !!! info "Požadavek GASOŠ"
@@ -42,4 +38,3 @@ Seznamy obrázků, grafů a tabulek se zařazují jen tehdy, když je práce sku
 
 - [Citace v poznámkách](../zotero/citace-v-poznamkach.md)
 - [Archivní prameny](../zotero/archivni-prameny.md)
-

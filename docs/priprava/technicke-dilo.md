@@ -1,9 +1,5 @@
 # Technické dílo
 
-## Cíl
-
-Uvidíte skladbu technického díla jako svislý postup od titulní strany po seznam použité literatury.
-
 Technické dílo popisuje problém, zvolené řešení, implementaci a ověření funkčnosti. Důležité je vysvětlit rozhodnutí a doložit, že výsledné řešení funguje.
 
 ```mermaid
@@ -40,4 +36,3 @@ flowchart TB
 
 - [Obrázky a grafy](../google-docs/obrazky-a-grafy.md)
 - [Export do PDF](../dokonceni/export-pdf.md)
-
