@@ -19,18 +19,6 @@ Dokážete se bezpečně vrátit před automatickou úpravu a poznáte typické 
 - skript není autorizovaný;
 - kopie dokumentu neobsahuje očekávaný skript nebo nabídku.
 
-## Historie opravených chyb
-
-Tyto zprávy se objevily při vývoji a patří jen do diagnostiky:
-
-- `TypeError: DocumentApp.flush is not a function`;
-- `TypeError: doc.getUi is not a function`;
-- `Exception: Invalid argument: element`.
-
-!!! warning "Častá chyba"
-    Do veřejné příručky nevkládejte staré nefunkční verze kódu. Publikovat se má jen opravený a otestovaný skript.
-
 ## Obnova
 
-Pokud se výsledek rozpadne, nepokračujte dalšími ručními opravami. Nejprve vytvořte kopii aktuálního stavu pro kontrolu a potom se vraťte přes historii verzí k poslední bezpečné verzi.
-
+Pokud výsledek neodpovídá očekávání, nepokračujte dalšími ručními opravami. Vraťte se přes historii verzí k poslední správné verzi.
