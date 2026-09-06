@@ -34,20 +34,6 @@
   margin-top: 2.1rem;
 }
 
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary .md-nav[data-md-level="1"] > .md-nav__list {
-    border-left: 1px solid var(--md-default-fg-color--lightest);
-    margin-left: .35rem;
-    padding-left: .65rem;
-  }
-
-  .md-sidebar--primary .md-nav[data-md-level="2"] > .md-nav__list {
-    border-left: 1px solid var(--md-default-fg-color--lightest);
-    margin-left: .35rem;
-    padding-left: .65rem;
-  }
-}
-
 .md-typeset div:has(> .mermaid) {
   overflow-x: auto;
   padding-bottom: .5rem;
