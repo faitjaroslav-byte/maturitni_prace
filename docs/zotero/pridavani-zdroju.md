@@ -28,6 +28,17 @@ V Zoteru použijte **Přidat položku podle identifikátoru**. Vhodné identifik
 
 ISSN označuje časopis nebo seriál jako celek, ne konkrétní článek. K nalezení článku použijte DOI, Connector, RIS/BibTeX nebo ruční záznam.
 
+### Zdroje pro cvičný text
+
+Pro cvičný text použijte dva skutečné odborné články. V Zoteru klikněte na ikonu kouzelné hůlky **Přidat položku podle identifikátoru** a postupně vložte jejich DOI:
+
+```text title="DOI pro cvičný text"
+10.1086/691462
+10.3389/fpsyg.2017.00605
+```
+
+DOI je trvalý identifikátor odborného zdroje. Zotero podle něj obvykle samo dohledá bibliografické údaje článku, takže není nutné celý záznam opisovat ručně. Po vložení vždy zkontrolujte, zda se načetl správný název, autoři, rok vydání a název časopisu.
+
 ## RIS, BibTeX a PDF
 
 Soubory `.ris` a `.bib` nejprve importujte do knihovny Zotera přes **Soubor -> Importovat**. PDF lze přetáhnout do Zotera, ale u skenů nebo špatných souborů nemusí být metadata rozpoznána.
@@ -35,4 +46,3 @@ Soubory `.ris` a `.bib` nejprve importujte do knihovny Zotera přes **Soubor -> 
 ## Ruční záznam
 
 Ruční zadání použijte tam, kde zdroj nemá použitelnou stránku, identifikátor ani katalogový záznam. Vždy vyberte správný typ položky.
-
