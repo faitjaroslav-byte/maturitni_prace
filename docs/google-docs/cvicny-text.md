@@ -122,5 +122,35 @@ NOVÁK, Jan. Digitální technologie a lidská pozornost. Praha: Akademické nak
 SVOBODOVÁ, Petra. Mobilní zařízení ve středoškolské výuce. Plzeň: Centrum pedagogického výzkumu, 2024.
 ```
 
+## Citace pro nácvik
+
+Ve výchozím textu jsou záměrně použité fiktivní citační údaje. Při nácviku práce se Zoterem je nahraďte skutečnými zdroji. Cílem není opisovat bibliografické záznamy ručně, ale vložit citace přes Zotero a ověřit, že se správně převedou při změně citačního stylu.
+
+### Ward et al. (2017)
+
+Tento zdroj použijte u části, která se týká vlivu přítomnosti telefonu na soustředění. Obsahově přesnější formulace věty je:
+
+> Pouhá přítomnost vlastního chytrého telefonu může snižovat dostupnou kognitivní kapacitu, i když jej člověk právě nepoužívá (Ward et al., 2017).
+
+Použitý zdroj:
+
+> WARD, Adrian F.; DUKE, Kristen; GNEEZY, Ayelet; BOS, Maarten W. Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity. *Journal of the Association for Consumer Research*, 2017, roč. 2, č. 2, s. 140-154. DOI: 10.1086/691462.
+
+!!! note "Ověřený postup"
+    Tato citace byla vložena do cvičného dokumentu v systému autor-rok a následně přepnuta na styl **ISO 690 full note**. Zotero ji úspěšně převedlo na poznámku pod čarou.
+
+### Wilmer et al. (2017)
+
+Tento zdroj použijte jako náhradu fiktivního údaje `Novák (2023)` v úvodní části o pozornosti. Vhodná formulace věty je:
+
+> Dosavadní výzkumy spojují používání chytrých telefonů zejména s pozorností, pamětí a dalšími oblastmi kognitivního fungování (Wilmer et al., 2017).
+
+Použitý zdroj:
+
+> WILMER, Henry H.; SHERMAN, Lauren E.; CHEIN, Jason M. Smartphones and Cognition: A Review of Research Exploring the Links between Mobile Technology Habits and Cognitive Functioning. *Frontiers in Psychology*, 2017, roč. 8, článek 605. DOI: 10.3389/fpsyg.2017.00605.
+
+!!! note "Ověření zdrojů"
+    Zdroj Ward et al. byl ve cvičném dokumentu ověřen při převodu ze systému autor-rok do poznámky pod čarou. Zdroj Wilmer et al. slouží jako druhý připravený reálný zdroj pro nahrazení fiktivního Nováka; při nácviku jej vložte a zkontrolujte stejným postupem.
+
 !!! tip "Doporučený postup"
     Cvičný text má obsahovat chyby záměrně. Studenti se tak učí poznat rozdíl mezi strukturou dokumentu a pouhým vzhledem.
