@@ -3,7 +3,9 @@
 <div class="lesson-meta" markdown>
 **Verze:** pracovní webová publikace  
 **Charakter příručky:** pomocný technický manuál zaměřený zejména na textové, tabulkové a pomocné aplikace  
-**Závazné podklady:** školní manuál **Jak napsat maturitní práci na G+SOŠ Rokycany**, verze 240221, datum 21. února 2024; zadání práce; průběžné požadavky vedoucího práce  
+<div class="lesson-authority" markdown>
+**Závazné podklady:** školní manuál **Jak napsat maturitní práci na G+SOŠ Rokycany**, verze 240221, datum 21. února 2024; zadání práce; průběžné požadavky vedoucího práce
+</div>
 **Aktualizace:** 6. září 2026
 </div>
 
