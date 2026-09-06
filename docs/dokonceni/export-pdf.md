@@ -7,6 +7,17 @@ Vytvoříte výsledné PDF a zkontrolujete, že odpovídá dokumentu.
 !!! info "Požadavek GASOŠ"
     Výstupní soubor má být PDF, pokud možno PDF/A.
 
+!!! note "PDF/A nelze vytvořit přímo v Google Docs"
+    Google Docs umí dokument stáhnout jako běžné PDF, ale nenabízí přímé uložení ve formátu PDF/A. Pokud je PDF/A vyžadováno, nejprve stáhněte běžné PDF a potom ho převeďte v nástroji, který PDF/A podporuje.
+
+    V praxi lze použít například:
+
+    - **Adobe Acrobat Pro** - placený profesionální nástroj, vhodný pro převod i kontrolu souladu s PDF/A;
+    - **LibreOffice** - bezplatný kancelářský balík, který umí při exportu do PDF zvolit verzi PDF/A;
+    - **PDF24 Creator** - bezplatný nástroj pro Windows, který obsahuje převod a profily pro PDF/A.
+
+    Po převodu vždy otevřete výsledné PDF/A a zkontrolujte vzhled stran, písma, obrázky, tabulky, citace a obsah.
+
 ## Postup
 
 1. Vytvořte konečnou pojmenovanou verzi dokumentu.
