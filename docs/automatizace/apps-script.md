@@ -19,6 +19,16 @@ Připravíte dokument na použití školního Apps Scriptu bez ztráty možnosti
 
 ## Kód skriptu ke zkopírování
 
+!!! info "Verze skriptu"
+    Níže uvedený kód je **rev1 ze dne 11. září 2026**.
+
+    Oproti předchozí verzi obsahuje tyto fixy:
+
+    - prázdné odstavce se stylem nadpisu se nečíslují;
+    - opakované spuštění zachovává konce stránek;
+    - číslování zůstává stabilní;
+    - formátování nadpisů se nepřepisuje.
+
 ```javascript title="kod.gs"
 --8<-- "downloads/kod.gs"
 ```

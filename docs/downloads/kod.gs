@@ -23,66 +23,240 @@ function onOpen() {
 
 
 function aktualizovatVse() {
+  const body = ziskatAktivniTeloDokumentu();
+  const pageBreaksBefore = spocitatKonceStranek(body);
+
   aktualizovatCislovaniNadpisu();
   aktualizovatCislovaniPopisku();
   aktualizovatSeznamy();
+
+  const pageBreaksAfter = spocitatKonceStranek(body);
+
+  if (pageBreaksAfter !== pageBreaksBefore) {
+    throw new Error(
+      'Během aktualizace se změnil počet konců stránek. ' +
+      'Před spuštěním: ' + pageBreaksBefore +
+      ', po spuštění: ' + pageBreaksAfter + '.'
+    );
+  }
 
   console.log('Celková aktualizace byla dokončena.');
 }
 
 
+/**
+ * ČÍSLOVÁNÍ NADPISŮ
+ */
+
 function aktualizovatCislovaniNadpisu() {
-  const doc = DocumentApp.getActiveDocument();
-  const paragraphs = doc.getBody().getParagraphs();
+  const body = ziskatAktivniTeloDokumentu();
+  const paragraphs = body.getParagraphs();
+
+  const pageBreaksBefore = spocitatKonceStranek(body);
 
   const counters = [0, 0, 0];
   let headingCount = 0;
+  let ignoredEmptyHeadings = 0;
 
   paragraphs.forEach(paragraph => {
-    const heading = paragraph.getHeading();
-    let level = 0;
-
-    if (heading === DocumentApp.ParagraphHeading.HEADING1) {
-      level = 1;
-    } else if (
-      heading === DocumentApp.ParagraphHeading.HEADING2
-    ) {
-      level = 2;
-    } else if (
-      heading === DocumentApp.ParagraphHeading.HEADING3
-    ) {
-      level = 3;
-    }
+    const level = zjistitUrovenNadpisu(paragraph);
 
     if (level === 0) {
       return;
     }
 
-    headingCount++;
+    const originalText = paragraph.getText();
+
+    const existingPrefix = najitPrefixCislaNadpisu(
+      originalText,
+      level
+    );
+
+    const cleanText = existingPrefix
+      ? originalText.substring(existingPrefix.length)
+      : originalText;
+
+    /*
+     * Prázdný nadpis ignorujeme ještě před změnou
+     * počítadel kapitol.
+     */
+    if (!obsahujeSkutecnyText(cleanText)) {
+      ignoredEmptyHeadings++;
+
+      /*
+       * Pokud byl prázdný nadpis očíslován při některém
+       * z předchozích spuštění, odstraníme pouze číslo.
+       */
+      if (existingPrefix) {
+        nahraditPrefixNadpisu(
+          paragraph,
+          existingPrefix,
+          ''
+        );
+      }
+
+      return;
+    }
+
     counters[level - 1]++;
 
     for (let i = level; i < counters.length; i++) {
       counters[i] = 0;
     }
 
-    const cleanText = odstranitCisloNadpisu(
-      paragraph.getText()
-    );
-
     const number = counters
       .slice(0, level)
       .join('.');
 
-    paragraph.setText(number + ' ' + cleanText);
+    /*
+     * Měníme pouze číselnou předponu textu.
+     * Celý odstavec pomocí setText() nepřepisujeme.
+     */
+    nahraditPrefixNadpisu(
+      paragraph,
+      existingPrefix,
+      number + ' '
+    );
+
+    headingCount++;
   });
 
-  console.log('Očíslováno nadpisů: ' + headingCount);
+  const pageBreaksAfter = spocitatKonceStranek(body);
+
+  if (pageBreaksAfter !== pageBreaksBefore) {
+    throw new Error(
+      'Při číslování nadpisů se změnil počet konců ' +
+      'stránek. Před spuštěním: ' + pageBreaksBefore +
+      ', po spuštění: ' + pageBreaksAfter + '.'
+    );
+  }
+
+  console.log(
+    'Očíslováno nadpisů: ' + headingCount
+  );
+
+  console.log(
+    'Ignorováno prázdných nadpisů: ' +
+    ignoredEmptyHeadings
+  );
 }
 
 
+function zjistitUrovenNadpisu(paragraph) {
+  const heading = paragraph.getHeading();
+
+  if (
+    heading ===
+    DocumentApp.ParagraphHeading.HEADING1
+  ) {
+    return 1;
+  }
+
+  if (
+    heading ===
+    DocumentApp.ParagraphHeading.HEADING2
+  ) {
+    return 2;
+  }
+
+  if (
+    heading ===
+    DocumentApp.ParagraphHeading.HEADING3
+  ) {
+    return 3;
+  }
+
+  return 0;
+}
+
+
+function obsahujeSkutecnyText(text) {
+  const normalizedText = text
+    // Nedělitelná a neviditelná mezera.
+    .replace(/[\u00A0\u200B-\u200D\uFEFF]/g, '')
+    // Běžné mezery, tabulátory a konce řádků.
+    .replace(/\s/g, '');
+
+  return normalizedText.length > 0;
+}
+
+
+function najitPrefixCislaNadpisu(text, level) {
+  let pattern;
+
+  if (level === 1) {
+    pattern = /^\s*\d+(?:\s+|$)/;
+  } else if (level === 2) {
+    pattern = /^\s*\d+\.\d+(?:\s+|$)/;
+  } else if (level === 3) {
+    pattern = /^\s*\d+\.\d+\.\d+(?:\s+|$)/;
+  } else {
+    return '';
+  }
+
+  const match = text.match(pattern);
+
+  return match ? match[0] : '';
+}
+
+
+function nahraditPrefixNadpisu(
+  paragraph,
+  puvodniPrefix,
+  novyPrefix
+) {
+  const text = paragraph.editAsText();
+  const currentText = text.getText();
+
+  /*
+   * Formát nové číselné předpony převezmeme z prvního
+   * skutečného znaku názvu nadpisu.
+   */
+  let sourceIndex = puvodniPrefix.length;
+
+  while (
+    sourceIndex < currentText.length &&
+    /\s/.test(currentText.charAt(sourceIndex))
+  ) {
+    sourceIndex++;
+  }
+
+  let titleAttributes = null;
+
+  if (sourceIndex < currentText.length) {
+    titleAttributes = text.getAttributes(sourceIndex);
+  }
+
+  if (puvodniPrefix.length > 0) {
+    text.deleteText(
+      0,
+      puvodniPrefix.length - 1
+    );
+  }
+
+  if (novyPrefix.length > 0) {
+    text.insertText(0, novyPrefix);
+
+    if (titleAttributes) {
+      text.setAttributes(
+        0,
+        novyPrefix.length - 1,
+        titleAttributes
+      );
+    }
+  }
+}
+
+
+/**
+ * ČÍSLOVÁNÍ POPISKŮ
+ */
+
 function aktualizovatCislovaniPopisku() {
-  const doc = DocumentApp.getActiveDocument();
-  const paragraphs = doc.getBody().getParagraphs();
+  const body = ziskatAktivniTeloDokumentu();
+  const paragraphs = body.getParagraphs();
+
+  const pageBreaksBefore = spocitatKonceStranek(body);
 
   let imageCounter = 0;
   let tableCounter = 0;
@@ -131,6 +305,16 @@ function aktualizovatCislovaniPopisku() {
     }
   });
 
+  const pageBreaksAfter = spocitatKonceStranek(body);
+
+  if (pageBreaksAfter !== pageBreaksBefore) {
+    throw new Error(
+      'Při číslování popisků se změnil počet konců ' +
+      'stránek. Před spuštěním: ' + pageBreaksBefore +
+      ', po spuštění: ' + pageBreaksAfter + '.'
+    );
+  }
+
   console.log(
     'Očíslováno obrázků a grafů: ' + imageCounter
   );
@@ -141,10 +325,16 @@ function aktualizovatCislovaniPopisku() {
 }
 
 
+/**
+ * AKTUALIZACE SEZNAMŮ
+ */
+
 function aktualizovatSeznamy() {
   const doc = DocumentApp.getActiveDocument();
   const tab = doc.getActiveTab().asDocumentTab();
   const body = tab.getBody();
+
+  const pageBreaksBefore = spocitatKonceStranek(body);
 
   const imageListHeading = najitNadpis(
     body,
@@ -170,8 +360,10 @@ function aktualizovatSeznamy() {
 
   const captions = najitPopisky(body);
 
-  // Odstranění seznamu tabulek provádíme jako první,
-  // aby se nezměnila poloha předcházejícího seznamu.
+  /*
+   * Odstranění seznamu tabulek provádíme jako první,
+   * aby se nezměnila poloha předcházejícího seznamu.
+   */
   odstranitStarePolozky(
     body,
     tableListHeading,
@@ -240,6 +432,16 @@ function aktualizovatSeznamy() {
       'MP_CAPTION_BOOKMARKS',
       JSON.stringify(bookmarkIds)
     );
+
+  const pageBreaksAfter = spocitatKonceStranek(body);
+
+  if (pageBreaksAfter !== pageBreaksBefore) {
+    throw new Error(
+      'Při aktualizaci seznamů se změnil počet konců ' +
+      'stránek. Před spuštěním: ' + pageBreaksBefore +
+      ', po spuštění: ' + pageBreaksAfter + '.'
+    );
+  }
 
   console.log(
     'Položek v seznamu obrázků a grafů: ' +
@@ -369,7 +571,24 @@ function odstranitStarePolozky(
       }
 
       if (pattern.test(paragraph.getText())) {
-        paragraph.removeFromParent();
+        if (
+          odstavecObsahujeKonecStranky(paragraph)
+        ) {
+          /*
+           * Text staré položky odstraníme, ale odstavec
+           * obsahující konec stránky zachováme.
+           */
+          odstranitPouzeTextOdstavce(paragraph);
+
+          paragraph.setHeading(
+            DocumentApp.ParagraphHeading.NORMAL
+          );
+
+          index++;
+        } else {
+          paragraph.removeFromParent();
+        }
+
         continue;
       }
     }
@@ -428,6 +647,11 @@ function vlozitPolozkySeznamu(
   });
 }
 
+
+/**
+ * ZÁLOŽKY A ODKAZY
+ */
+
 function vytvoritZalozku(tab, paragraph) {
   for (
     let i = 0;
@@ -458,6 +682,7 @@ function vytvoritZalozku(tab, paragraph) {
     paragraph.getText()
   );
 }
+
 
 function vytvoritOdkazNaZalozku(
   documentId,
@@ -508,6 +733,18 @@ function odstranStareZalozky(tab) {
 }
 
 
+/**
+ * POMOCNÉ FUNKCE
+ */
+
+function ziskatAktivniTeloDokumentu() {
+  const doc = DocumentApp.getActiveDocument();
+  const tab = doc.getActiveTab().asDocumentTab();
+
+  return tab.getBody();
+}
+
+
 function nahraditPrefixPopisku(
   paragraph,
   puvodniPrefix,
@@ -515,10 +752,12 @@ function nahraditPrefixPopisku(
 ) {
   const text = paragraph.editAsText();
 
-  text.deleteText(
-    0,
-    puvodniPrefix.length - 1
-  );
+  if (puvodniPrefix.length > 0) {
+    text.deleteText(
+      0,
+      puvodniPrefix.length - 1
+    );
+  }
 
   text.insertText(0, novyPrefix);
 }
@@ -526,7 +765,62 @@ function nahraditPrefixPopisku(
 
 function odstranitCisloNadpisu(text) {
   return text.replace(
-    /^\s*\d+(?:\.\d+){0,2}\s+/,
+    /^\s*\d+(?:\.\d+){0,2}(?:\s+|$)/,
     ''
   );
+}
+
+
+function odstavecObsahujeKonecStranky(
+  paragraph
+) {
+  for (
+    let i = 0;
+    i < paragraph.getNumChildren();
+    i++
+  ) {
+    if (
+      paragraph.getChild(i).getType() ===
+      DocumentApp.ElementType.PAGE_BREAK
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+
+function odstranitPouzeTextOdstavce(
+  paragraph
+) {
+  const text = paragraph.editAsText();
+  const textLength = text.getText().length;
+
+  if (textLength > 0) {
+    text.deleteText(
+      0,
+      textLength - 1
+    );
+  }
+}
+
+
+function spocitatKonceStranek(body) {
+  let count = 0;
+
+  let found = body.findElement(
+    DocumentApp.ElementType.PAGE_BREAK
+  );
+
+  while (found) {
+    count++;
+
+    found = body.findElement(
+      DocumentApp.ElementType.PAGE_BREAK,
+      found
+    );
+  }
+
+  return count;
 }
