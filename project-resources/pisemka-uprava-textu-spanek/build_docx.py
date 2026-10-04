@@ -196,22 +196,27 @@ def build_document():
     for step in required_steps:
         add_numbered(document, step)
 
-    add_heading(document, "Doporučená struktura dokumentu", 2)
-    for item in [
-        "titulní strana",
-        "obsah",
-        "Úvod",
-        "Spánek a soustředění",
-        "Délka spánku",
-        "Kvalita spánku",
-        "Krátké šetření mezi studenty",
-        "Výsledky dotazníku",
-        "Závěr",
+    add_heading(document, "Požadovaná struktura dokumentu", 2)
+    add_body_paragraph(document, "Dodržte tuto strukturu dokumentu:")
+    add_code_block(document, [
+        "Titulní strana",
+        "Obsah",
+        "1 Úvod",
+        "2 Spánek a soustředění",
+        "  2.1 Délka spánku",
+        "  2.2 Kvalita spánku",
+        "3 Krátké šetření mezi studenty",
+        "  3.1 Výsledky dotazníku",
+        "4 Závěr",
         "Seznam použité literatury",
         "Seznam obrázků a grafů",
         "Seznam tabulek",
-    ]:
-        add_bullet(document, item)
+    ])
+    add_body_paragraph(
+        document,
+        "Čísla nadpisů nesmí být napsaná ručně. Použijte připravený skript "
+        "nebo číslovaný seznam navázaný na nadpisy.",
+    )
 
     add_heading(document, "Obrázek k vložení", 2)
     picture_paragraph = document.add_paragraph()

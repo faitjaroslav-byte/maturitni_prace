@@ -60,20 +60,26 @@ Použijte tyto soubory ze zadání:
 15. Vytvořte **Seznam obrázků a grafů**.
 16. Vytvořte **Seznam tabulek**.
 
-## Doporučená struktura dokumentu
+## Požadovaná struktura dokumentu
 
-- titulní strana;
-- obsah;
-- Úvod;
-- Spánek a soustředění;
-- Délka spánku;
-- Kvalita spánku;
-- Krátké šetření mezi studenty;
-- Výsledky dotazníku;
-- Závěr;
-- Seznam použité literatury;
-- Seznam obrázků a grafů;
-- Seznam tabulek.
+Dodržte tuto strukturu dokumentu:
+
+```text
+Titulní strana
+Obsah
+1 Úvod
+2 Spánek a soustředění
+  2.1 Délka spánku
+  2.2 Kvalita spánku
+3 Krátké šetření mezi studenty
+  3.1 Výsledky dotazníku
+4 Závěr
+Seznam použité literatury
+Seznam obrázků a grafů
+Seznam tabulek
+```
+
+Čísla nadpisů nesmí být napsaná ručně. Použijte připravený skript nebo číslovaný seznam navázaný na nadpisy.
 
 ## Bonusový úkol
 
