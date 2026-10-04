@@ -1,0 +1,52 @@
+Kvalita vzduchu ve třídě a soustředění studentů
+
+Úvod
+
+Kvalita vzduchu ve třídě patří mezi faktory, které mohou ovlivnit průběh vyučování. V uzavřené místnosti se během hodiny postupně zvyšuje koncentrace oxidu uhličitého a zároveň se může zhoršovat subjektivní pocit svěžesti. Studenti potom mohou vnímat únavu, horší pozornost nebo potřebu častěji měnit polohu.
+
+Cílem krátkého textu je popsat vztah mezi větráním učebny, koncentrací oxidu uhličitého a subjektivním hodnocením soustředění během školního dne.
+
+Kvalita vzduchu a soustředění
+
+Oxid uhličitý ve třídě
+
+Oxid uhličitý vzniká při dýchání a v učebně s větším počtem studentů se jeho koncentrace může zvyšovat poměrně rychle. Samotná hodnota oxidu uhličitého není jediným ukazatelem kvality prostředí, ale často slouží jako jednoduchý signál, že je potřeba místnost vyvětrat.
+
+Vyšší koncentrace oxidu uhličitého se může spojovat s horším vnímáním kvality vzduchu a slabším výkonem při náročnějších mentálních úlohách. VLOŽTE ZDE BONUSOVOU CITACI.
+
+Větrání během výuky
+
+Větrání může probíhat různými způsoby. Krátké intenzivní otevření oken během přestávky často sníží koncentraci oxidu uhličitého rychleji než dlouhodobě pootevřené okno. Na druhou stranu je nutné zohlednit venkovní teplotu, hluk a bezpečnost ve třídě.
+
+Mezi běžná opatření patří:
+
+větrat intenzivně během přestávek
+
+sledovat pocit vydýchaného vzduchu ve třídě
+
+nezakrývat větrací otvory nábytkem
+
+domluvit se na pravidlech větrání při chladném počasí
+
+Krátké měření ve třídě
+
+Výsledky měření
+
+V krátkém cvičném měření byla ve třídě sledována průměrná koncentrace oxidu uhličitého a subjektivní hodnocení soustředění studentů. Hodnocení soustředění bylo vyjádřeno na škále od 1 do 5, kde 1 znamená velmi slabé soustředění a 5 velmi dobré soustředění.
+
+Z následujících údajů vytvořte tabulku.
+
+Režim větrání;Počet měření;Průměrná koncentrace CO2;Průměrné hodnocení soustředění
+Bez větrání během hodiny;6;1850;2,6
+Krátké větrání o přestávce;6;1180;3,5
+Pravidelné větrání po 20 minutách;6;890;4,0
+
+MÍSTO PRO OBRÁZEK VĚTRÁNÍ UČEBNY
+
+Výsledky naznačují, že pravidelné větrání může souviset s lepším subjektivním hodnocením soustředění. Z takto malého měření však nelze vyvozovat obecné závěry. Výsledek může ovlivnit například počet osob ve třídě, délka hodiny, venkovní počasí nebo typ vyučované činnosti.
+
+Závěr
+
+Kvalita vzduchu je jednou z podmínek příjemného prostředí pro učení. Pravidelné větrání může pomoci snížit pocit únavy a zlepšit subjektivní vnímání soustředění. Ve školní praxi je vhodné hledat takový režim větrání, který zlepší vzduch v místnosti a zároveň nebude výrazně narušovat průběh výuky.
+
+Seznam použité literatury
