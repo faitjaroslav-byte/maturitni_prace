@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Večerní příprava na školu</title>
+  <desc id="desc">Ilustrační obrázek pracovního stolu s lampou, knihou, hrnkem a oknem s noční oblohou.</desc>
+  <rect width="1200" height="800" fill="#102033"/>
+  <rect x="0" y="570" width="1200" height="230" fill="#6f5138"/>
+  <rect x="110" y="80" width="360" height="300" rx="14" fill="#1c334d" stroke="#b9c7d6" stroke-width="8"/>
+  <circle cx="380" cy="150" r="44" fill="#f2d27a"/>
+  <circle cx="362" cy="136" r="44" fill="#1c334d"/>
+  <circle cx="205" cy="150" r="6" fill="#dce7f3"/>
+  <circle cx="270" cy="245" r="5" fill="#dce7f3"/>
+  <circle cx="420" cy="285" r="4" fill="#dce7f3"/>
+  <circle cx="325" cy="115" r="4" fill="#dce7f3"/>
+  <path d="M715 240c0-62 51-112 113-112s113 50 113 112" fill="none" stroke="#d4dce5" stroke-width="18" stroke-linecap="round"/>
+  <rect x="680" y="235" width="300" height="60" rx="30" fill="#d4dce5"/>
+  <rect x="732" y="285" width="196" height="130" rx="20" fill="#e7ecf2"/>
+  <path d="M785 415h90l28 160H755z" fill="#24384f"/>
+  <rect x="700" y="575" width="260" height="26" rx="13" fill="#152336"/>
+  <rect x="245" y="525" width="330" height="44" rx="12" fill="#29384f"/>
+  <path d="M250 518l148-66c20-9 43-9 63 0l116 52v64H250z" fill="#f2f5f8"/>
+  <path d="M412 450v118" stroke="#b7c4d1" stroke-width="8"/>
+  <path d="M270 520h282" stroke="#b7c4d1" stroke-width="6"/>
+  <rect x="168" y="590" width="300" height="34" rx="8" fill="#c6d2df"/>
+  <rect x="188" y="625" width="300" height="34" rx="8" fill="#e2b86e"/>
+  <rect x="208" y="660" width="300" height="34" rx="8" fill="#8db0d6"/>
+  <rect x="525" y="615" width="145" height="110" rx="22" fill="#d7e3ed"/>
+  <path d="M670 650c55 0 55 44 0 44" fill="none" stroke="#d7e3ed" stroke-width="18" stroke-linecap="round"/>
+  <rect x="785" y="610" width="240" height="92" rx="12" fill="#24384f"/>
+  <rect x="812" y="635" width="185" height="12" rx="6" fill="#b9c7d6"/>
+  <rect x="812" y="665" width="135" height="12" rx="6" fill="#b9c7d6"/>
+  <path d="M85 765h1030" stroke="#8a694b" stroke-width="10" stroke-linecap="round"/>
+</svg>
