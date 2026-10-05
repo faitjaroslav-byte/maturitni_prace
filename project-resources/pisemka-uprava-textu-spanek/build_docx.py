@@ -259,6 +259,46 @@ def build_document():
     ]:
         add_bullet(document, item)
 
+    add_heading(document, "Hodnocení typografických chyb", 2)
+    add_body_paragraph(document, "Typografické chyby se počítají váženě:")
+    add_code_block(document, [
+        "malá chyba   = 0,5 chyby",
+        "běžná chyba  = 1 chyba",
+        "hrubá chyba  = 3 chyby",
+    ])
+    add_body_paragraph(
+        document,
+        "Malá chyba je například chybějící zarovnání do bloku, drobná "
+        "nejednotnost mezer nebo méně vhodné umístění obrázku.",
+    )
+    add_body_paragraph(
+        document,
+        "Běžná chyba je například prázdný řádek místo nastavení mezery, "
+        "ruční mezery pro odsazení, špatná úroveň nadpisu, chybný tvar "
+        "popisku nebo nejednotná úprava tabulky.",
+    )
+    add_body_paragraph(
+        document,
+        "Hrubá chyba je například ruční číslování nadpisů, rozhozené "
+        "číslování nadpisů, chybějící automatický obsah, chybějící seznam "
+        "obrázků a grafů, chybějící seznam tabulek, chybějící obrázek nebo "
+        "tabulka, chybějící popisky nebo číslování stran od špatného místa.",
+    )
+    add_body_paragraph(document, "Přepočtený počet chyb se převede na známku takto:")
+    add_code_block(document, [
+        "1: 0-3 chyby",
+        "2: 3,5-7 chyb",
+        "3: 7,5-11 chyb",
+        "4: 11,5-15 chyb",
+        "5: 15,5 a více chyb",
+    ])
+    add_body_paragraph(
+        document,
+        "Opakovaná stejná chyba se nepočítá neomezeně. Pokud se stejný typ "
+        "chyby opakuje v celém dokumentu, započítá se obvykle podle rozsahu "
+        "jako 2-3 chyby.",
+    )
+
     document.add_section(WD_SECTION.NEW_PAGE)
     add_heading(document, "Neformátovaný text ke zkopírování", 1)
     add_body_paragraph(
