@@ -11,6 +11,7 @@ from docx.shared import Cm, Pt, RGBColor
 
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT = BASE_DIR / "pisemka-uprava-textu-vzduch.docx"
+GRADING_OUTPUT = BASE_DIR / "hodnoceni-typografickych-chyb.docx"
 IMAGE = BASE_DIR / "obrazek-vzduch.png"
 PLAIN_TEXT = BASE_DIR / "neformatovany-text.txt"
 
@@ -87,6 +88,15 @@ def add_numbered(document, text):
     run.font.size = Pt(10)
 
 
+def add_compact_bullet(document, text):
+    paragraph = document.add_paragraph(style="List Bullet")
+    paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 0.92
+    run = paragraph.add_run(text)
+    run.font.name = "Arial"
+    run.font.size = Pt(9)
+
+
 def add_code_block(document, lines):
     table = document.add_table(rows=1, cols=1)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -125,9 +135,98 @@ def add_metadata_table(document):
     document.add_paragraph()
 
 
-def build_document():
-    document = Document()
+def add_data_table(document, rows):
+    table = document.add_table(rows=len(rows), cols=len(rows[0]))
+    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    set_table_borders(table)
 
+    for row_index, row_data in enumerate(rows):
+        row = table.rows[row_index]
+        for cell_index, value in enumerate(row_data):
+            cell = row.cells[cell_index]
+            cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+            if row_index == 0:
+                set_cell_shading(cell, "1F4E79")
+                set_cell_text(cell, value, bold=True)
+            else:
+                set_cell_text(cell, value)
+
+    document.add_paragraph()
+
+
+def add_grading_content(document):
+    heading = add_heading(document, "Hodnocení typografických chyb", 1)
+    heading.paragraph_format.space_after = Pt(2)
+    add_body_paragraph(document, "Typografické chyby se počítají váženě:")
+    add_data_table(document, [
+        ("Typ chyby", "Váha"),
+        ("malá chyba", "0,5 chyby"),
+        ("běžná chyba", "1 chyba"),
+        ("hrubá chyba", "3 chyby"),
+    ])
+
+    heading = add_heading(document, "Příklady malých chyb", 2)
+    heading.paragraph_format.space_before = Pt(4)
+    heading.paragraph_format.space_after = Pt(0)
+    for item in [
+        "text není zarovnán do bloku",
+        "drobná nejednotnost mezer před nebo za jedním odstavcem",
+        "drobná nejednotnost velikosti obrázku",
+        "méně vhodné, ale ještě přijatelné umístění obrázku",
+        "drobná typografická nejednotnost v jednom místě",
+    ]:
+        add_compact_bullet(document, item)
+
+    heading = add_heading(document, "Příklady běžných chyb", 2)
+    heading.paragraph_format.space_before = Pt(4)
+    heading.paragraph_format.space_after = Pt(0)
+    for item in [
+        "prázdný řádek místo nastavení mezery mezi odstavci",
+        "ruční mezery pro odsazení",
+        "běžný text není upraven stylem Normální text",
+        "popisek má špatný tvar",
+        "tabulka není dobře zarovnaná nebo nemá jednotnou úpravu",
+        "nadpis má špatnou úroveň stylu",
+        "chybné zalomení stránky v jednom místě",
+    ]:
+        add_compact_bullet(document, item)
+
+    heading = add_heading(document, "Příklady hrubých chyb", 2)
+    heading.paragraph_format.space_before = Pt(4)
+    heading.paragraph_format.space_after = Pt(0)
+    for item in [
+        "nadpisy jsou číslované ručně dopsanými čísly",
+        "celé číslování nadpisů je rozhozené",
+        "chybí automatický obsah",
+        "chybí seznam obrázků a grafů",
+        "chybí seznam tabulek",
+        "chybí obrázek nebo tabulka",
+        "chybí popisky",
+        "číslování stran nezačíná od kapitoly Úvod",
+        "dokument je výrazně rozbitý prázdnými řádky, ručními mezerami nebo špatnými styly",
+    ]:
+        add_compact_bullet(document, item)
+
+    heading = add_heading(document, "Převod na známku", 2)
+    heading.paragraph_format.space_before = Pt(4)
+    heading.paragraph_format.space_after = Pt(0)
+    add_data_table(document, [
+        ("Známka", "Přepočtené chyby"),
+        ("1", "0-3"),
+        ("2", "3,5-7"),
+        ("3", "7,5-11"),
+        ("4", "11,5-15"),
+        ("5", "15,5 a více"),
+    ])
+    add_body_paragraph(
+        document,
+        "Opakovaná stejná chyba se nepočítá neomezeně. Pokud se stejný typ "
+        "chyby opakuje v celém dokumentu, započítá se obvykle podle rozsahu "
+        "jako 2-3 chyby.",
+    )
+
+
+def setup_document(document):
     section = document.sections[0]
     section.top_margin = Cm(2.0)
     section.bottom_margin = Cm(2.0)
@@ -137,6 +236,11 @@ def build_document():
     styles = document.styles
     styles["Normal"].font.name = "Arial"
     styles["Normal"].font.size = Pt(11)
+
+
+def build_document():
+    document = Document()
+    setup_document(document)
 
     title = document.add_paragraph()
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -255,46 +359,6 @@ def build_document():
     ]:
         add_bullet(document, item)
 
-    add_heading(document, "Hodnocení typografických chyb", 2)
-    add_body_paragraph(document, "Typografické chyby se počítají váženě:")
-    add_code_block(document, [
-        "malá chyba   = 0,5 chyby",
-        "běžná chyba  = 1 chyba",
-        "hrubá chyba  = 3 chyby",
-    ])
-    add_body_paragraph(
-        document,
-        "Malá chyba je například chybějící zarovnání do bloku, drobná "
-        "nejednotnost mezer nebo méně vhodné umístění obrázku.",
-    )
-    add_body_paragraph(
-        document,
-        "Běžná chyba je například prázdný řádek místo nastavení mezery, "
-        "ruční mezery pro odsazení, špatná úroveň nadpisu, chybný tvar "
-        "popisku nebo nejednotná úprava tabulky.",
-    )
-    add_body_paragraph(
-        document,
-        "Hrubá chyba je například ruční číslování nadpisů, rozhozené "
-        "číslování nadpisů, chybějící automatický obsah, chybějící seznam "
-        "obrázků a grafů, chybějící seznam tabulek, chybějící obrázek nebo "
-        "tabulka, chybějící popisky nebo číslování stran od špatného místa.",
-    )
-    add_body_paragraph(document, "Přepočtený počet chyb se převede na známku takto:")
-    add_code_block(document, [
-        "1: 0-3 chyby",
-        "2: 3,5-7 chyb",
-        "3: 7,5-11 chyb",
-        "4: 11,5-15 chyb",
-        "5: 15,5 a více chyb",
-    ])
-    add_body_paragraph(
-        document,
-        "Opakovaná stejná chyba se nepočítá neomezeně. Pokud se stejný typ "
-        "chyby opakuje v celém dokumentu, započítá se obvykle podle rozsahu "
-        "jako 2-3 chyby.",
-    )
-
     document.add_section(WD_SECTION.NEW_PAGE)
     add_heading(document, "Neformátovaný text ke zkopírování", 1)
     add_body_paragraph(
@@ -314,5 +378,18 @@ def build_document():
     document.save(OUTPUT)
 
 
+def build_grading_document():
+    document = Document()
+    setup_document(document)
+    section = document.sections[0]
+    section.top_margin = Cm(1.4)
+    section.bottom_margin = Cm(1.4)
+    section.left_margin = Cm(1.6)
+    section.right_margin = Cm(1.6)
+    add_grading_content(document)
+    document.save(GRADING_OUTPUT)
+
+
 if __name__ == "__main__":
     build_document()
+    build_grading_document()
