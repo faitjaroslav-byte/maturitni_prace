@@ -1,0 +1,44 @@
+Kvalita vzduchu v učebně
+
+    Úvod
+
+    V uzavřené učebně se během hodiny mění kvalita vzduchu. S počtem osob roste koncentrace oxidu uhličitého a současně se může zhoršovat subjektivní pocit svěžesti.
+
+    Text pracuje s modelovým měřením, které ukazuje rozdíl mezi režimy větrání během vyučování.
+
+    Vzduch a výkon při učení
+
+    Oxid uhličitý a větrání
+
+    Oxid uhličitý sám o sobě není jediným ukazatelem kvality vzduchu. Často ale slouží jako jednoduchý signál, že je třeba místnost vyvětrat.
+
+    Pocit svěžesti
+
+    Pocit svěžesti může ovlivnit i teplota, vlhkost, pachy nebo únava studentů. Proto se subjektivní hodnocení nemusí vždy přesně shodovat s měřením. VLOŽTE ZDE BONUSOVOU CITACI.
+
+    Rozdíl mezi komfortem a měřením
+
+    Komfort je širší pojem než jedna naměřená hodnota. Při hodnocení učebny je vhodné spojit měření s pozorováním průběhu hodiny.
+
+    Modelové měření v učebně
+
+    Výsledky krátkého šetření
+
+    V modelovém měření se porovnávaly tři režimy větrání a průměrné hodnoty oxidu uhličitého.
+
+    Z následujících údajů vytvořte tabulku.
+
+    Režim;Průměr CO2 v ppm;Hodnocení svěžesti
+bez větrání;1850;2,4
+větrání o přestávce;1260;3,3
+krátké větrání během hodiny;940;4,1
+
+    MÍSTO PRO GRAF KONCENTRACE CO2 V UČEBNĚ
+
+    Zjednodušená data ukazují, že pravidelné větrání může snížit koncentraci oxidu uhličitého a zlepšit subjektivní hodnocení prostředí.
+
+    Závěr
+
+    Kvalita vzduchu v učebně je praktické téma, protože ji lze ovlivnit jednoduchým režimem větrání. Důležité je hledat rovnováhu mezi čerstvým vzduchem, teplotou a hlukem zvenčí.
+
+    Seznam použité literatury

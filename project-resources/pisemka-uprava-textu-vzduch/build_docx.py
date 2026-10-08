@@ -23,14 +23,16 @@ def set_cell_shading(cell, fill):
     tc_pr.append(shd)
 
 
-def set_cell_text(cell, text, bold=False):
+def set_cell_text(cell, text, bold=False, size=10):
     cell.text = ""
     paragraph = cell.paragraphs[0]
     paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 0.9
     run = paragraph.add_run(text)
     run.bold = bold
     run.font.name = "Arial"
-    run.font.size = Pt(10)
+    run.font.size = Pt(size)
     if bold:
         run.font.color.rgb = RGBColor(255, 255, 255)
 
@@ -97,6 +99,16 @@ def add_compact_bullet(document, text):
     run.font.size = Pt(9)
 
 
+def add_compact_body_paragraph(document, text):
+    paragraph = document.add_paragraph()
+    paragraph.paragraph_format.space_after = Pt(2)
+    paragraph.paragraph_format.line_spacing = 0.96
+    run = paragraph.add_run(text)
+    run.font.name = "Arial"
+    run.font.size = Pt(9)
+    return paragraph
+
+
 def add_code_block(document, lines):
     table = document.add_table(rows=1, cols=1)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -147,9 +159,9 @@ def add_data_table(document, rows):
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
             if row_index == 0:
                 set_cell_shading(cell, "1F4E79")
-                set_cell_text(cell, value, bold=True)
+                set_cell_text(cell, value, bold=True, size=9)
             else:
-                set_cell_text(cell, value)
+                set_cell_text(cell, value, size=9)
 
     document.add_paragraph()
 
@@ -218,7 +230,22 @@ def add_grading_content(document):
         ("4", "11,5-15"),
         ("5", "15,5 a více"),
     ])
-    add_body_paragraph(
+    heading = add_heading(document, "Převod chyb na procenta", 2)
+    heading.paragraph_format.space_before = Pt(4)
+    heading.paragraph_format.space_after = Pt(0)
+    add_compact_body_paragraph(
+        document,
+        "Pro orientační procentní hodnocení použijte převod: procenta = "
+        "100 - počet přepočtených chyb × 5. Výsledek se počítá z "
+        "přepočtených chyb po započtení váhy malé, běžné a hrubé chyby. "
+        "Pokud by výsledek vyšel pod 0 %, zapíše se 0 %.",
+    )
+    add_compact_body_paragraph(
+        document,
+        "Příklad: 6 přepočtených chyb = 100 - 6 × 5 = 70 %. Šest "
+        "přepočtených chyb tedy odpovídá 70 %, což spadá do známky 2.",
+    )
+    add_compact_body_paragraph(
         document,
         "Opakovaná stejná chyba se nepočítá neomezeně. Pokud se stejný typ "
         "chyby opakuje v celém dokumentu, započítá se obvykle podle rozsahu "
@@ -382,8 +409,8 @@ def build_grading_document():
     document = Document()
     setup_document(document)
     section = document.sections[0]
-    section.top_margin = Cm(1.4)
-    section.bottom_margin = Cm(1.4)
+    section.top_margin = Cm(1.0)
+    section.bottom_margin = Cm(1.0)
     section.left_margin = Cm(1.6)
     section.right_margin = Cm(1.6)
     add_grading_content(document)

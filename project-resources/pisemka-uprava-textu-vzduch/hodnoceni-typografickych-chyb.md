@@ -48,4 +48,22 @@ Typografické chyby se počítají váženě:
 | 4 | 11,5-15 |
 | 5 | 15,5 a více |
 
+## Převod chyb na procenta
+
+Pro orientační procentní hodnocení použijte jednoduchý převod:
+
+```text
+procenta = 100 - počet přepočtených chyb × 5
+```
+
+Výsledek se počítá z přepočtených chyb, tedy po započtení váhy malé, běžné a hrubé chyby. Pokud by výsledek vyšel pod 0 %, zapíše se 0 %.
+
+Příklad:
+
+```text
+6 přepočtených chyb = 100 - 6 × 5 = 70 %
+```
+
+Šest přepočtených chyb tedy odpovídá 70 %, což spadá do známky 2.
+
 Opakovaná stejná chyba se nepočítá neomezeně. Pokud se stejný typ chyby opakuje v celém dokumentu, započítá se obvykle podle rozsahu jako 2-3 chyby.

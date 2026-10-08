@@ -1,0 +1,44 @@
+Hluk ve třídě a počítání
+
+    Úvod
+
+    Zvukové prostředí ve třídě může ovlivnit, jak snadno studenti sledují výklad a řeší úlohy. Ne každý zvuk je stejně rušivý a záleží také na typu práce.
+
+    Text popisuje modelovou situaci, kdy studenti řešili krátké početní úlohy v několika poslechových podmínkách.
+
+    Zvukové prostředí při výuce
+
+    Ticho, ruch a hluk
+
+    Ticho obvykle usnadňuje soustředění, ale běžná třída nikdy není úplně bez zvuku. Rozdíl je mezi přirozeným ruchem a hlukem, který přerušuje pozornost.
+
+    Náročnost úlohy
+
+    Jednoduché úlohy lze někdy zvládnout i v rušnějším prostředí. U úloh, které vyžadují více kroků, může hluk zvyšovat počet chyb. VLOŽTE ZDE BONUSOVOU CITACI.
+
+    Věk a citlivost studentů
+
+    Mladší studenti mohou být citlivější na rušivé zvuky, protože se jejich pracovní návyky a schopnost soustředění stále vyvíjejí.
+
+    Modelové řešení početních úloh
+
+    Výsledky krátkého šetření
+
+    Modelová data ukazují průměrnou úspěšnost při řešení úloh v různých zvukových podmínkách.
+
+    Z následujících údajů vytvořte tabulku.
+
+    Podmínka;Počet studentů;Úspěšnost v %
+ticho;20;86
+hluk z chodby;20;78
+hovor ve třídě;20;69
+
+    MÍSTO PRO OBRÁZEK HLUKU VE TŘÍDĚ
+
+    Výsledek neznamená, že každé mluvení ve třídě je problém. Ukazuje ale, že při náročné práci je vhodné hluk omezit.
+
+    Závěr
+
+    Hluk ve třídě je důležitý organizační faktor. Dobře nastavená pravidla práce mohou pomoci zejména při úlohách, které vyžadují přesnost a několik kroků.
+
+    Seznam použité literatury
